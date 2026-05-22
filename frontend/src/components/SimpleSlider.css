@@ -1,0 +1,6 @@
+.floating-div{
+    transform: translate(-50% , -50%);
+    background-color: #0d0d0da2;
+    color: #f2f2f2f2;
+    border-radius: 10px;
+}

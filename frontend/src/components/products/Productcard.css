@@ -1,0 +1,9 @@
+.CCC:hover{
+    transform: scale(1.02,1.02);
+    box-shadow: 2px 2px 10px  #4ab7b7;
+}
+.detal:hover{
+    transform: scale(1.02,1.02);
+    box-shadow: 2px 2px 10px  #265a5a;
+}
+ 

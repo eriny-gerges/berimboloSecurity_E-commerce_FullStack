@@ -1,0 +1,19 @@
+.owner{
+    background-color: #18312F;
+    border-radius: 30px;
+}
+.owner:hover {
+    transform: scale(1.2,1.2);
+    background-color: #0d0d0dc8 !important;
+}
+.feedback{
+   background-image: url("E:\we school\third year\it\person\unit 6\task 4\eriny gerges_we school-naser city_U6Task4\Berimbolo web\frontend\react-vite-berimbolo\public\images\OIP.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover; 
+}
+.hist{
+    background-color: rgba(217, 249, 239, 0.533);
+    font-weight: bolder;
+    font-size:xx-large;
+     
+}

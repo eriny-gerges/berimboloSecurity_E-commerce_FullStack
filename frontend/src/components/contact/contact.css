@@ -1,0 +1,11 @@
+.form-item{
+    background-color: #d6ebebd7;
+    color: #097259c2;
+    font-weight: bold;
+    margin: 30px;
+    padding: 15px;
+}
+.form-item::placeholder{
+    color: #097259c2;
+    font-weight: bold;
+}
