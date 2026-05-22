@@ -37,7 +37,7 @@ Advanced cybersecurity and smart protection platform built with React, Laravel, 
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/eriny-gerges/berimboloSecurity_E-commerce_FullStack
 ```
 
 ---
