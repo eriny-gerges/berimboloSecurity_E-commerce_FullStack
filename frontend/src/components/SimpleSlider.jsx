@@ -11,7 +11,7 @@ export default function SimpleSlider() {
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
       
-      {/* النص فوق السلايدر */}
+      
       <div
         style={{
           position: "absolute",
@@ -24,7 +24,7 @@ export default function SimpleSlider() {
         <p style={{ color: "#fff" }}>For all security services</p>
       </div>
 
-      {/* Slider */}
+      
       <Swiper
         modules={[Autoplay]}
         autoplay={{ delay: 2500 }}

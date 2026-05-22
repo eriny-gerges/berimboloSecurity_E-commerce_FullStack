@@ -29,7 +29,7 @@
   gap: var(--space-6);
 }
 
-/* ── Brand ── */
+
 .cyber-navbar__brand {
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@
   text-transform: uppercase;
 }
 
-/* ── Desktop Links ── */
+
 .cyber-navbar__links {
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
   background: var(--clr-accent-soft);
 }
 
-/* ── Actions ── */
+
 .cyber-navbar__actions {
   display: flex;
   align-items: center;
@@ -170,7 +170,7 @@
   font-size: 0.83rem;
 }
 
-/* ── Hamburger ── */
+
 .cyber-navbar__hamburger {
   display: none;
   flex-direction: column;
@@ -204,7 +204,7 @@
   background: var(--clr-accent);
 }
 
-/* ── Mobile Menu ── */
+
 .cyber-mobile-menu {
   position: fixed;
   top: var(--navbar-height);
@@ -271,7 +271,7 @@
   backdrop-filter: blur(2px);
 }
 
-/* ── Responsive ── */
+
 @media (max-width: 900px) {
   .cyber-navbar__links,
   .cyber-navbar__login-btn,
@@ -282,4 +282,29 @@
 @media (max-width: 480px) {
   .cyber-navbar__brand-text { display: none; }
   .cyber-navbar__cart { display: none; }
+}
+.cyber-navbar__brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyber-navbar__logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+
+  transition:
+    transform .3s ease,
+    filter .3s ease;
+}
+
+.cyber-navbar__logo:hover {
+  transform: scale(1.08);
+
+  filter:
+    drop-shadow(0 0 12px rgba(0, 212, 255, 0.9));
 }

@@ -55,14 +55,14 @@ export default function Footer() {
 
   return (
     <footer className="cyber-footer">
-      {/* Top border glow */}
+      
       <div className="cyber-footer__topline" />
 
       <div className="container-custom">
-        {/* ── Main grid ── */}
+        
         <div className="cyber-footer__grid">
 
-          {/* Brand column */}
+          
           <div className="cyber-footer__brand-col">
             <Link to="/" className="cyber-footer__brand">
               <span className="cyber-footer__brand-icon">
@@ -84,7 +84,7 @@ export default function Footer() {
               Protecting what matters most with cutting-edge technology.
             </p>
 
-            {/* Social links */}
+            
             <div className="cyber-footer__social">
               {SOCIAL_LINKS.map(({ href, label, icon }) => (
                 <a key={label} href={href} className="cyber-footer__social-btn"
@@ -95,7 +95,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
+          
           <div className="cyber-footer__links-col">
             <h4 className="cyber-footer__col-title">Company</h4>
             <ul>{FOOTER_LINKS.company.map(({ label, path }) => (
@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ── Bottom bar ── */}
+        
         <div className="cyber-footer__bottom">
           <p className="cyber-footer__copy">
             © {year} BerimBolo Security. All rights reserved.

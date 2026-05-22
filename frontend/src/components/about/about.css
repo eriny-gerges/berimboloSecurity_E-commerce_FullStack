@@ -1,19 +1,516 @@
-.owner{
-    background-color: #18312F;
-    border-radius: 30px;
+
+:root {
+  --about-bg: #060d14;
+  --about-bg-2: #0a1628;
+
+  --about-card: rgba(255,255,255,0.03);
+
+  --about-border: rgba(0,212,255,0.12);
+  --about-border-hover: rgba(0,212,255,0.28);
+
+  --about-cyan: #00d4ff;
+  --about-green: #00ff88;
+
+  --about-text: #e8f4f8;
+  --about-muted: #7a9ab0;
 }
-.owner:hover {
-    transform: scale(1.2,1.2);
-    background-color: #0d0d0dc8 !important;
+
+.about-page {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top, rgba(0,212,255,0.08) 0%, transparent 40%),
+    linear-gradient(
+      180deg,
+      var(--about-bg) 0%,
+      var(--about-bg-2) 50%,
+      var(--about-bg) 100%
+    );
+
+  padding-bottom: 6rem;
 }
-.feedback{
-   background-image: url("E:\we school\third year\it\person\unit 6\task 4\eriny gerges_we school-naser city_U6Task4\Berimbolo web\frontend\react-vite-berimbolo\public\images\OIP.jpeg");
-   background-repeat: no-repeat;
-   background-size: cover; 
+
+.about-page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  pointer-events: none;
 }
-.hist{
-    background-color: rgba(217, 249, 239, 0.533);
-    font-weight: bolder;
-    font-size:xx-large;
-     
+
+.about-hero {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+
+  padding-inline: 1rem;
+}
+
+.about-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+
+  padding: .6rem 1.2rem;
+
+  margin-bottom: 1.6rem;
+
+  border: 1px solid rgba(0,212,255,.2);
+
+  background: rgba(0,212,255,.08);
+
+  color: var(--about-cyan);
+
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .72rem;
+
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.about-hero__badge-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--about-cyan);
+
+  box-shadow: 0 0 10px var(--about-cyan);
+
+  animation: pulse 1.5s infinite;
+}
+
+.about-hero__title {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  font-weight: 800;
+
+  line-height: 1.05;
+  letter-spacing: -.03em;
+
+  color: var(--about-text);
+
+  margin-bottom: 1.4rem;
+}
+
+.about-hero__title span {
+  background: linear-gradient(
+    90deg,
+    var(--about-cyan),
+    #0099cc,
+    var(--about-green)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-hero__sub {
+  max-width: 760px;
+
+  margin: auto;
+
+  font-size: 1.05rem;
+  line-height: 1.9;
+
+  color: var(--about-muted);
+}
+
+.about-team {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.about-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--about-card);
+
+  border: 1px solid var(--about-border);
+
+  backdrop-filter: blur(14px);
+
+  padding: 2.5rem 2rem;
+
+  transition:
+    .35s ease transform,
+    .35s ease border-color,
+    .35s ease box-shadow;
+
+  text-align: center;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+
+  border-color: var(--about-border-hover);
+
+  box-shadow:
+    0 0 0 1px rgba(0,212,255,.18),
+    0 0 35px rgba(0,212,255,.12),
+    0 20px 60px rgba(0,0,0,.45);
+}
+
+
+
+.about-card__glow {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top,
+    rgba(0,212,255,.12),
+    transparent 55%);
+
+  pointer-events: none;
+}
+
+
+
+.about-card__corner {
+  position: absolute;
+
+  width: 26px;
+  height: 26px;
+
+  border-color: rgba(0,212,255,.4);
+}
+
+.about-card__corner--tl {
+  top: 12px;
+  left: 12px;
+
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.about-card__corner--br {
+  right: 12px;
+  bottom: 12px;
+
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.about-card__icon {
+  position: relative;
+  z-index: 2;
+
+  width: 140px;
+  height: 140px;
+
+  margin: 0 auto 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,212,255,.12),
+      rgba(0,255,136,.08)
+    );
+
+  border: 1px solid rgba(0,212,255,.2);
+}
+
+.about-card__icon-svg {
+  width: 100px;
+  height: 100px;
+
+  color: var(--about-cyan);
+}
+
+.about-card__content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-card__role {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding: .45rem .9rem;
+
+  background: rgba(0,212,255,.08);
+
+  border: 1px solid rgba(0,212,255,.15);
+
+  color: var(--about-cyan);
+
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .7rem;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.about-card__name {
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  color: var(--about-text);
+
+  margin-bottom: 1rem;
+}
+
+.about-card__desc {
+  color: var(--about-muted);
+
+  line-height: 1.9;
+
+  font-size: .95rem;
+}
+
+.about-story {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 5rem;
+}
+
+.about-story__card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  background: var(--about-card);
+
+  border: 1px solid var(--about-border);
+
+  backdrop-filter: blur(14px);
+}
+
+.about-story__glow {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at right,
+    rgba(0,212,255,.1),
+    transparent 45%);
+}
+
+.about-story__left,
+.about-story__right {
+  position: relative;
+  z-index: 2;
+
+  padding: 4rem;
+}
+
+.about-story__left {
+  border-right: 1px solid rgba(0,212,255,.08);
+}
+
+.about-story__tag {
+  width: fit-content;
+
+  margin-bottom: 1.5rem;
+
+  padding: .5rem .9rem;
+
+  background: rgba(0,212,255,.08);
+
+  border: 1px solid rgba(0,212,255,.18);
+
+  color: var(--about-cyan);
+
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .72rem;
+
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.about-story__title {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: var(--about-text);
+
+  margin-bottom: 1.5rem;
+}
+
+.about-story__desc {
+  color: var(--about-muted);
+
+  line-height: 1.9;
+
+  font-size: .98rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.about-story__stats {
+  display: flex;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.about-story__stat {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 170px;
+
+  padding: 1rem 1.2rem;
+
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(0,212,255,.1);
+}
+
+.about-story__stat-value {
+  font-family: 'Share Tech Mono', monospace;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: var(--about-cyan);
+
+  margin-bottom: .25rem;
+}
+
+.about-story__stat-label {
+  font-size: .72rem;
+
+  color: var(--about-muted);
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.about-story__panel {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: rgba(255,255,255,.02);
+
+  border: 1px solid rgba(0,212,255,.08);
+
+  padding: 2.5rem;
+}
+
+.about-story__panel-title {
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: var(--about-text);
+
+  margin-bottom: 1.5rem;
+}
+
+.about-story__panel-text {
+  color: var(--about-muted);
+
+  line-height: 1.9;
+
+  margin-bottom: 1.4rem;
+}
+
+@keyframes pulse {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .3;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .about-team {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story__left {
+    border-right: none;
+    border-bottom: 1px solid rgba(0,212,255,.08);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-story__left,
+  .about-story__right {
+    padding: 2rem;
+  }
+
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .about-hero__sub {
+    font-size: .95rem;
+  }
+
+  .about-story__title {
+    font-size: 2rem;
+  }
+
+  .about-story__stats {
+    flex-direction: column;
+  }
+
+  .about-card__icon {
+    width: 110px;
+    height: 110px;
+  }
+
+  .about-card__icon-svg {
+    width: 75px;
+    height: 75px;
+  }
 }

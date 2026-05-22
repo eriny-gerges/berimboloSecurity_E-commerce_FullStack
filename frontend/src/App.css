@@ -8,18 +8,18 @@
   min-height: 100vh;
 }
 
-/* ── Page wrapper ── */
+
 .page-wrapper {
   flex: 1;
   padding-top: var(--navbar-height);
 }
 
-/* ── Page entry animations ── */
+
 .page-enter {
   animation: fadeInUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
-/* ── Hero / Banner common ── */
+
 .hero-bg {
   position: relative;
   background-color: var(--clr-bg-primary);
@@ -36,7 +36,7 @@
   pointer-events: none;
 }
 
-/* Radial accent glow */
+
 .hero-glow {
   position: absolute;
   border-radius: 50%;
@@ -59,7 +59,7 @@
   left: 10%;
 }
 
-/* ── Section backgrounds ── */
+
 .section-dark {
   background-color: var(--clr-bg-primary);
 }
@@ -70,7 +70,7 @@
   background-color: var(--clr-surface);
 }
 
-/* ── Number/Stat counter cards ── */
+
 .stat-card {
   text-align: center;
   padding: var(--space-8) var(--space-6);
@@ -90,7 +90,7 @@
   letter-spacing: 0.04em;
 }
 
-/* ── CTA banner ── */
+
 .cta-banner {
   position: relative;
   background: linear-gradient(135deg, var(--clr-bg-secondary) 0%, var(--clr-surface) 100%);
@@ -108,7 +108,7 @@
   pointer-events: none;
 }
 
-/* ── Feature icon ── */
+
 .feature-icon {
   width: 56px;
   height: 56px;
@@ -128,7 +128,7 @@
   box-shadow: var(--shadow-glow);
 }
 
-/* ── Spinner ── */
+
 .cyber-spinner {
   width: 40px;
   height: 40px;
@@ -138,7 +138,7 @@
   animation: spin-slow 0.8s linear infinite;
 }
 
-/* ── Alert / Notice ── */
+
 .cyber-alert {
   padding: var(--space-4) var(--space-5);
   border-radius: var(--radius-md);
@@ -161,7 +161,7 @@
   color: var(--clr-success);
 }
 
-/* ── Responsive tweaks ── */
+
 @media (max-width: 576px) {
   .cta-banner { padding: var(--space-10) var(--space-6); }
 }

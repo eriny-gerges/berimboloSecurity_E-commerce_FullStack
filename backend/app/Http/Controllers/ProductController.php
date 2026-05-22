@@ -69,7 +69,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+       
     }
 
     /**
@@ -77,6 +77,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+       
     }
 }

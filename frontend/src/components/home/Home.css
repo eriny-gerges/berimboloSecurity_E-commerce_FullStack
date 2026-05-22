@@ -3,7 +3,7 @@
    Matches the dark cybersecurity design system
    ============================================================ */
 
-/* ---------- Shared section helpers ---------- */
+
 .section-py { padding: 5rem 0; }
 
 .section-eyebrow {
@@ -32,7 +32,7 @@
   line-height: 1.7;
 }
 
-/* ---------- btn-cyber (shared, mirrors App.css) ---------- */
+
 .btn-cyber {
   display: inline-flex;
   align-items: center;
@@ -80,7 +80,7 @@
   transform: translateY(-2px);
 }
 
-/* ---------- HERO ---------- */
+
 .home-hero {
   position: relative;
   min-height: 100vh;
@@ -130,7 +130,7 @@
   padding-bottom: 6rem;
 }
 
-/* Badge */
+
 .home-hero__badge {
   display: inline-flex;
   align-items: center;
@@ -161,7 +161,7 @@
   50% { opacity: 0.2; }
 }
 
-/* Title */
+
 .home-hero__title {
   display: flex;
   flex-direction: column;
@@ -203,7 +203,7 @@
   animation: fadeslidedown 0.9s ease 0.45s both;
 }
 
-/* Stats row */
+
 .home-hero__stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -239,7 +239,7 @@
   text-transform: uppercase;
 }
 
-/* Scroll hint */
+
 .home-hero__scroll-hint {
   position: absolute;
   bottom: 2rem;
@@ -276,7 +276,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- TICKER ---------- */
+
 .home-ticker {
   display: flex;
   align-items: center;
@@ -341,7 +341,7 @@
   to { transform: translateX(-50%); }
 }
 
-/* ---------- FEATURES ---------- */
+
 .home-features {
   background: linear-gradient(180deg, #060d14 0%, #0a1628 50%, #060d14 100%);
 }
@@ -435,7 +435,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- CTA BANNER ---------- */
+
 .home-cta-banner {
   position: relative;
   overflow: hidden;
@@ -489,7 +489,7 @@
   flex-shrink: 0;
 }
 
-/* ---------- TESTIMONIALS ---------- */
+
 .home-testimonials {
   background: #060d14;
 }
@@ -592,7 +592,7 @@
   width: 44px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 991px) {
   .home-features__grid {
     grid-template-columns: repeat(2, 1fr);

@@ -1,97 +1,224 @@
-import "./serveses.css"
-import  "../../images/alarm2.jpeg" 
-import im1 from "../../images/security-cameras-banner.webp"
-import im2 from "../../images/door-access-control.jpg"
-import im3 from "../../images/alarm.jpeg"
-import im4 from "../../images/bell.jpeg"
+import "./serveses.css";
+import { Link } from "react-router-dom";
 
+import im1 from "../../images/security-cameras-banner.webp";
+import im2 from "../../images/door-access-control.jpg";
+import im3 from "../../images/alarm.jpeg";
+import im4 from "../../images/bell.jpeg";
+
+const services = [
+  {
+    id: 1,
+    title: "Security Cameras",
+    subtitle: "Sell, Install & Support",
+    image: im1,
+    reverse: false,
+    desc:
+      "Discover premium CCTV and surveillance camera systems in Egypt. We provide complete installation, configuration, maintenance, and enterprise-grade monitoring solutions for businesses and homes.",
+    features: [
+      "HD & 4K Cameras",
+      "Night Vision",
+      "Remote Monitoring",
+      "Installation Included",
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Door Access Control",
+    subtitle: "Smart Entry Protection",
+    image: im2,
+    reverse: true,
+    desc:
+      "Enhance your security with advanced access control systems. From biometric authentication to smart card access and remote management, we secure your facilities with modern technologies.",
+    features: [
+      "Biometric Access",
+      "RFID Systems",
+      "Smart Locks",
+      "Enterprise Security",
+    ],
+  },
+
+  {
+    id: 3,
+    title: "Alarm Systems",
+    subtitle: "24/7 Threat Detection",
+    image: im3,
+    reverse: false,
+    desc:
+      "Protect your property with intelligent burglar alarm systems designed for residential and commercial security. Fast alerts, real-time monitoring, and reliable protection.",
+    features: [
+      "Motion Detection",
+      "Emergency Alerts",
+      "Wireless Sensors",
+      "Real-time Monitoring",
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Smart Bell Systems",
+    subtitle: "Modern Smart Communication",
+    image: im4,
+    reverse: true,
+    desc:
+      "Upgrade your entrances with smart bell and intercom systems featuring mobile connectivity, HD video streaming, and secure visitor communication.",
+    features: [
+      "Video Doorbells",
+      "Mobile Integration",
+      "HD Streaming",
+      "Cloud Storage",
+    ],
+  },
+];
 
 function Serveses() {
   return (
-    <div className='container-fluid row'> 
-      <div  className=' m-2 col-12 color-main   '
-       style={{ 
-        // backgroundImage: "url(/images/alarm2.jpeg)",
-        // backgroundSize: 'cover',
-  
-        // textShadow:"1px 1px 3px black"
-         }}>
+    <section className="services-page">
 
-        <h1 style={{textAlign:"center"}} className='m-5'>Our Services</h1>
-       
-      </div>
-      <div className='container p-3 m-3'>
-        
-      <div className='blocky row rounded  m-3 mb-5'  style={{}} >
-       <div className='col-6 p-5'>
-        <h3 className='mb-4' style={{color:"#223d3b" , }}> 
-        Security Cameras in Egypt | Sell, Install & Support
-        </h3>
-        <h5>
-        Discover premium security camera systems in Egypt. We offer sales, installation, and support with warranty coverage. Protect your business with expert solutions 
-        </h5>
-       </div>
-       <div className='col-6'>
-        <div className="col-12">
-          <img src={im1} alt="" style={{maxHeight:"50%",maxWidth:"102%" ,}} className='rounded' />
+      
+      <div className="services-hero">
+
+        <div className="services-hero__badge">
+          <span className="services-hero__badge-dot" />
+          Enterprise Security Solutions
         </div>
-       </div>
+
+        <h1 className="services-hero__title">
+          Advanced <span>Security Services</span>
+        </h1>
+
+        <p className="services-hero__sub">
+          Military-grade protection systems engineered for enterprises,
+          businesses, and smart homes. Combining AI-powered surveillance,
+          intelligent monitoring, and next-generation cyber-physical security.
+        </p>
+
       </div>
-     
-     
-      <div className='blocky row rounded  m-3 mb-5'  style={{}} >
-       <div className='col-6'>
-        <div className="col-12">
-          <img src={im2} alt="" style={{maxHeight:"100%", maxWidth:"100%"}} className='rounded' />
-        </div>
-       </div>
-       <div className='col-6 p-5'>
-        <h3 className='mb-4' style={{color:"#223d3b" , }}> 
-        Door Access Control Systems in Egypt | Sell, Install & Support
-        </h3>
-        <h5>
-        
-        Discover premium security camera systems in Egypt. We offer sales, installation, and support with warranty coverage. Protect your business with expert solutions Enhance your security with our door access control systems in Egypt. We provide sales, installation, and support services with warranty coverage. Trusted security solutions
-        </h5>
-       </div>
+
+      
+      <div className="container services-container">
+
+        {services.map((service, idx) => (
+          <div
+            key={service.id}
+            className={`service-card ${
+              service.reverse ? "service-card--reverse" : ""
+            }`}
+            style={{
+              animationDelay: `${idx * 0.12}s`,
+            }}
+          >
+
+            
+            <div className="service-card__glow" />
+
+            
+            <span className="service-card__corner service-card__corner--tl" />
+            <span className="service-card__corner service-card__corner--br" />
+
+            
+            <div className="service-card__media">
+
+              <div className="service-card__scanline" />
+
+              <img
+                src={service.image}
+                alt={service.title}
+                className="service-card__img"
+              />
+
+              <div className="service-card__overlay">
+                <div className="service-card__overlay-text">
+                  Secure Infrastructure
+                </div>
+              </div>
+
+            </div>
+
+            
+            <div className="service-card__content">
+
+              <div className="service-card__tag">
+                <span className="service-card__tag-dot" />
+                Security Solution
+              </div>
+
+              <h2 className="service-card__title">
+                {service.title}
+              </h2>
+
+              <h3 className="service-card__subtitle">
+                {service.subtitle}
+              </h3>
+
+              <p className="service-card__desc">
+                {service.desc}
+              </p>
+
+              
+              <div className="service-card__features">
+
+                {service.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="service-card__feature"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+
+                    {feature}
+                  </div>
+                ))}
+
+              </div>
+
+              
+              <div className="service-card__actions">
+
+                <Link
+                  to="/products"
+                  className="service-card__btn service-card__btn--primary"
+                >
+                  Explore Products
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="service-card__btn service-card__btn--ghost"
+                >
+                  Contact Us
+                </Link>
+
+              </div>
+
+            </div>
+          </div>
+        ))}
+
       </div>
-     
-      <div className='blocky row rounded  m-3 mb-5'  style={{}} >
-       <div className='col-6 p-5'>
-        <h3 className='mb-4' style={{color:"#223d3b" , }}> 
-        Burglar Alarm Systems in Egypt | Sell, Install & Support
-        </h3>
-        <h5>
-        Protect your property with top-quality burglar alarm systems in Egypt. We offer sales, installation, and support with warranty. Trusted security solutions
-        </h5>
-       </div>
-       <div className='col-6'>
-        <div className='col-12'>
-          <img src={im3} alt="" style={{maxHeight:"100%",maxWidth:"100%" , width:"100%"}} className='rounded' />
-        </div>
-       </div>
-      </div>
-     
-      <div className='blocky row rounded  m-3 mb-5'  style={{}} >
-       <div className='col-6'>
-        <div className="col-12">
-          <img src={im4} alt="" style={{maxHeight:"50%",maxWidth:"102%" ,width:"100%"}} className='rounded' />
-        </div>
-       </div>
-       <div className='col-6 p-5'>
-        <h3 className='mb-4' style={{color:"#223d3b" , }}> 
-        Smart Bells Systems in Egypt | Sell, Install & Support
-        </h3>
-        <h5>
-        Protect your property with top-quality burglar alarm systems in Egypt. We offer sales, installation, and support with warranty. Trusted security solutions
-        </h5>
-       </div>
-      </div>
-     
-  
-     </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default Serveses
+export default Serveses;

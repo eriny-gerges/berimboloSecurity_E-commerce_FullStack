@@ -3,12 +3,12 @@
    Dark Cybersecurity Premium Theme
    ============================================================ */
 
-/* ── Google Fonts ── */
+
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
-/* ── CSS Custom Properties ── */
+
 :root {
-  /* Core palette */
+  
   --clr-bg-primary:    #040d18;
   --clr-bg-secondary:  #071426;
   --clr-bg-card:       #0a1f3a;
@@ -16,33 +16,33 @@
   --clr-surface:       #0d2340;
   --clr-surface-hover: #112b4e;
 
-  /* Accent */
+  
   --clr-accent:        #00d4ff;
   --clr-accent-2:      #0066ff;
   --clr-accent-glow:   rgba(0, 212, 255, 0.25);
   --clr-accent-soft:   rgba(0, 212, 255, 0.12);
 
-  /* Text */
+  
   --clr-text-primary:  #e8f4fd;
   --clr-text-secondary:#8ab3d4;
   --clr-text-muted:    #4a7294;
   --clr-text-inverse:  #040d18;
 
-  /* Status */
+  
   --clr-success:  #00e5a0;
   --clr-warning:  #ffb700;
   --clr-danger:   #ff4060;
 
-  /* Borders */
+  
   --clr-border:        rgba(0, 212, 255, 0.15);
   --clr-border-strong: rgba(0, 212, 255, 0.35);
 
-  /* Typography */
+  
   --font-display: 'Sora', sans-serif;
   --font-body:    'Inter', sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
-  /* Spacing scale */
+  
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -56,14 +56,14 @@
   --space-20: 5rem;
   --space-24: 6rem;
 
-  /* Radius */
+  
   --radius-sm:  6px;
   --radius-md:  12px;
   --radius-lg:  18px;
   --radius-xl:  24px;
   --radius-full: 9999px;
 
-  /* Shadows */
+  
   --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md:   0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-lg:   0 8px 40px rgba(0, 0, 0, 0.6);
@@ -71,18 +71,18 @@
   --shadow-glow-strong: 0 0 50px rgba(0, 212, 255, 0.35);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 212, 255, 0.05);
 
-  /* Transitions */
+  
   --ease-fast:   150ms ease;
   --ease-base:   250ms ease;
   --ease-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
   --ease-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* Layout */
+  
   --navbar-height: 72px;
   --container-max: 1280px;
 }
 
-/* ── Reset & Base ── */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -105,13 +105,13 @@ body {
   min-height: 100vh;
 }
 
-/* Scrollbar */
+
 ::-webkit-scrollbar        { width: 6px; }
 ::-webkit-scrollbar-track  { background: var(--clr-bg-primary); }
 ::-webkit-scrollbar-thumb  { background: var(--clr-accent-2); border-radius: var(--radius-full); }
 ::-webkit-scrollbar-thumb:hover { background: var(--clr-accent); }
 
-/* ── Typography ── */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -135,7 +135,7 @@ a:hover { color: var(--clr-text-primary); }
 
 img, video { max-width: 100%; display: block; }
 
-/* ── Utility Classes ── */
+
 .section-padding { padding: var(--space-20) 0; }
 .section-padding-sm { padding: var(--space-12) 0; }
 
@@ -146,7 +146,7 @@ img, video { max-width: 100%; display: block; }
   padding: 0 var(--space-6);
 }
 
-/* Section headers */
+
 .section-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -184,7 +184,7 @@ img, video { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* Accent text */
+
 .text-accent { color: var(--clr-accent) !important; }
 .text-gradient {
   background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-2) 100%);
@@ -193,7 +193,7 @@ img, video { max-width: 100%; display: block; }
   background-clip: text;
 }
 
-/* ── Buttons ── */
+
 .btn-cyber {
   display: inline-flex;
   align-items: center;
@@ -258,7 +258,7 @@ img, video { max-width: 100%; display: block; }
   color: var(--clr-accent);
 }
 
-/* ── Cards ── */
+
 .glass-card {
   background: var(--clr-bg-glass);
   border: 1px solid var(--clr-border);
@@ -273,7 +273,7 @@ img, video { max-width: 100%; display: block; }
   box-shadow: var(--shadow-card), var(--shadow-glow);
 }
 
-/* ── Badge ── */
+
 .badge-cyber {
   display: inline-flex;
   align-items: center;
@@ -297,7 +297,7 @@ img, video { max-width: 100%; display: block; }
   border: 1px solid rgba(0, 229, 160, 0.25);
 }
 
-/* ── Animated Decorations ── */
+
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50%       { opacity: 0.8; transform: scale(1.05); }
@@ -344,14 +344,14 @@ img, video { max-width: 100%; display: block; }
 .animate-fadeIn    { animation: fadeIn 0.5s ease both; }
 .animate-float     { animation: float 4s ease-in-out infinite; }
 
-/* Delay utilities */
+
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
 
-/* ── Grid Pattern Background ── */
+
 .bg-grid {
   background-image:
     linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
@@ -359,7 +359,7 @@ img, video { max-width: 100%; display: block; }
   background-size: 48px 48px;
 }
 
-/* ── Divider ── */
+
 .divider-cyber {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--clr-border-strong), transparent);
@@ -367,7 +367,7 @@ img, video { max-width: 100%; display: block; }
   margin: var(--space-8) 0;
 }
 
-/* ── Loading Skeleton ── */
+
 .skeleton {
   background: linear-gradient(
     90deg,
@@ -380,7 +380,7 @@ img, video { max-width: 100%; display: block; }
   border-radius: var(--radius-md);
 }
 
-/* ── Bootstrap Overrides ── */
+
 .btn { font-family: var(--font-display); border-radius: var(--radius-md); }
 .card { background: var(--clr-bg-card); border-color: var(--clr-border); color: var(--clr-text-primary); }
 .navbar-dark .navbar-nav .nav-link { color: var(--clr-text-secondary); }
@@ -399,7 +399,7 @@ img, video { max-width: 100%; display: block; }
 }
 .form-control::placeholder { color: var(--clr-text-muted); }
 
-/* ── Responsive helpers ── */
+
 @media (max-width: 768px) {
   :root { --navbar-height: 64px; }
   .section-padding { padding: var(--space-12) 0; }

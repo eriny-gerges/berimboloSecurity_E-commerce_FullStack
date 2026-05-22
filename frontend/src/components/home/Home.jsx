@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import{ useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -191,7 +192,7 @@ export default function Home() {
 
   return (
     <div className="home-page">
-      {/* HERO */}
+      
       <section className="home-hero">
         <canvas className="home-hero__canvas" ref={canvasRef} />
         <div className="home-hero__grid-overlay" />
@@ -245,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THREAT TICKER */}
+      
       <div className="home-ticker">
         <div className="home-ticker__label">
           <span className="home-ticker__label-dot" />
@@ -263,7 +264,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* FEATURES */}
+      
       <section className="home-features section-py">
         <div className="container">
           <div className="text-center mb-5">
@@ -292,7 +293,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
+      
       <section className="home-cta-banner">
         <div className="home-cta-banner__bg" />
         <div className="container home-cta-banner__inner">
@@ -302,7 +303,7 @@ export default function Home() {
             </h2>
             <p className="home-cta-banner__body">
               The average breach goes undetected for 207 days. Every day without enterprise
-              protection is a risk you can't afford.
+              protection is a risk you can&apos;t afford.
             </p>
           </div>
           <div className="home-cta-banner__actions">
@@ -320,7 +321,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      
       <section className="home-testimonials section-py">
         <div className="container">
           <div className="text-center mb-5">
@@ -334,7 +335,7 @@ export default function Home() {
                 key={i}
                 className={`home-tcard ${i === activeTestimonial ? "home-tcard--active" : ""}`}
               >
-                <div className="home-tcard__quote-mark">"</div>
+                <div className="home-tcard__quote-mark">&quot;</div>
                 <p className="home-tcard__text">{t.quote}</p>
                 <div className="home-tcard__author">
                   <div className="home-tcard__avatar">{t.avatar}</div>
