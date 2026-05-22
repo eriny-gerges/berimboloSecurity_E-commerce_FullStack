@@ -1,10 +1,167 @@
-.navbar{
-    background: linear-gradient(#18312F,#18312F,#18312F,#2b3e3c);
-    box-shadow: none !important;
+/* ============================================================
+   BERIM BOLO SECURITY — APP STYLES
+   ============================================================ */
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.color-main{
-    color: #8FBFBF !important;
+
+/* ── Page wrapper ── */
+.page-wrapper {
+  flex: 1;
+  padding-top: var(--navbar-height);
 }
-.color-2{
-    color: #DBFFFF !important;
+
+/* ── Page entry animations ── */
+.page-enter {
+  animation: fadeInUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ── Hero / Banner common ── */
+.hero-bg {
+  position: relative;
+  background-color: var(--clr-bg-primary);
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Radial accent glow */
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-glow-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.18) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+}
+.hero-glow-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+  bottom: -100px;
+  left: 10%;
+}
+
+/* ── Section backgrounds ── */
+.section-dark {
+  background-color: var(--clr-bg-primary);
+}
+.section-secondary {
+  background-color: var(--clr-bg-secondary);
+}
+.section-surface {
+  background-color: var(--clr-surface);
+}
+
+/* ── Number/Stat counter cards ── */
+.stat-card {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+}
+.stat-card .stat-number {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+  display: block;
+  line-height: 1;
+}
+.stat-card .stat-label {
+  font-size: 0.875rem;
+  color: var(--clr-text-secondary);
+  margin-top: var(--space-2);
+  letter-spacing: 0.04em;
+}
+
+/* ── CTA banner ── */
+.cta-banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--clr-bg-secondary) 0%, var(--clr-surface) 100%);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-16) var(--space-12);
+  overflow: hidden;
+  text-align: center;
+}
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 212, 255, 0.04) 100%);
+  pointer-events: none;
+}
+
+/* ── Feature icon ── */
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--clr-accent-soft);
+  border: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--clr-accent);
+  flex-shrink: 0;
+  transition: all var(--ease-slow);
+}
+.feature-icon:hover, *:hover > .feature-icon {
+  background: rgba(0, 212, 255, 0.2);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── Spinner ── */
+.cyber-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--clr-border);
+  border-top-color: var(--clr-accent);
+  border-radius: 50%;
+  animation: spin-slow 0.8s linear infinite;
+}
+
+/* ── Alert / Notice ── */
+.cyber-alert {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  font-size: 0.9rem;
+}
+.cyber-alert-info {
+  background: var(--clr-accent-soft);
+  border-color: var(--clr-border-strong);
+  color: var(--clr-accent);
+}
+.cyber-alert-danger {
+  background: rgba(255, 64, 96, 0.1);
+  border-color: rgba(255, 64, 96, 0.3);
+  color: var(--clr-danger);
+}
+.cyber-alert-success {
+  background: rgba(0, 229, 160, 0.1);
+  border-color: rgba(0, 229, 160, 0.3);
+  color: var(--clr-success);
+}
+
+/* ── Responsive tweaks ── */
+@media (max-width: 576px) {
+  .cta-banner { padding: var(--space-10) var(--space-6); }
 }

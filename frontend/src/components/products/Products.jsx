@@ -110,7 +110,7 @@ function Products() {
     <div className="container py-5">
 
       {/* TITLE */}
-      <h1 className="text-center mb-5">
+      <h1 className="text-center py-5 mb-5">
         Products
       </h1>
 
